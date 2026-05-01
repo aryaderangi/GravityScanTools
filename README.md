@@ -58,7 +58,7 @@ chmod +x scanner.sh
 Edit:
 
 ```bash
-final_targets.txt
+targets.txt
 ```
 
 Example:
