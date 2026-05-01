@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GravityScanTools</title>
+<style>
+body{background:#0d1117;color:#00ffcc;font-family:monospace;text-align:center}
+h1{color:#58a6ff}
+.card{background:#161b22;border:1px solid #30363d;margin:20px;padding:20px;border-radius:12px}
+button{margin:8px;padding:10px;background:#238636;border:none;color:#fff;cursor:pointer}
+textarea{width:90%;height:180px;background:#000;color:#00ffcc}
+</style>
+</head>
+<body>
+
+<h1>🚀 GravityScanTools</h1>
+<p>by Arjellicc</p>
+
+<div class="card">
+<h3>📡 Targets</h3>
+<textarea id="ips"></textarea>
+<button onclick="load()">Load List</button>
+</div>
+
+<div class="card">
+<h3>⚡ Results</h3>
+<textarea id="out"></textarea>
+<button onclick="clean()">Clean (OK)</button>
+</div>
+
+<script>
+function load(){
+  fetch("final_targets.txt").then(r=>r.text())
+  .then(t=>document.getElementById("ips").value=t)
+}
+function clean(){
+  let d=document.getElementById("out").value.split("\n");
+  document.getElementById("out").value=d.filter(x=>x.includes("OK")).join("\n")
+}
+</script>
+
+</body>
+</html>
