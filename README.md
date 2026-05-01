@@ -2,68 +2,111 @@
 
 **by Gravityzone (Arjelicc)**
 
-## 🧠 About
+---
 
-GravityScanTools is a lightweight CDN/SNI scanning toolkit designed to identify clean, stable endpoints for tunneling and connectivity testing.
+## 📘 Description (EN)
 
-It combines curated IP ranges (ArvanCloud, Cloudflare) with high-quality SNI domains to validate TLS handshakes and filter reliable targets.
+GravityScanTools is a lightweight CDN / SNI scanner to find clean and stable endpoints.
+
+### ✨ Features
+
+* CDN whitelist (Arvan + Cloudflare)
+* SNI / TLS testing
+* Clean IP filtering
+* Web UI (GitHub Pages)
 
 ---
 
-## ⚡ Features
+## 📗 توضیحات (FA)
 
-* 📡 Curated whitelist (CDN IP ranges + domains)
-* 🔍 SNI/TLS validation scanner
-* 🧹 Clean result filtering (OK endpoints)
-* 🌐 Web UI via GitHub Pages
-* 🤖 Ready for Telegram bot integration
+این ابزار برای اسکن CDN و SNI طراحی شده تا آی‌پی‌های تمیز و پایدار را پیدا کند.
 
----
+### ✨ امکانات
 
-## 🛠️ Use Cases
-
-* CDN tunneling research
-* Network testing & latency checks
-* Identifying stable TLS endpoints
-* Dev experiments with Xray / sing-box
+* لیست آماده IP و دامنه
+* تست TLS و SNI
+* فیلتر آی‌پی‌های سالم
+* رابط کاربری تحت وب
 
 ---
 
-## 📂 Structure
+# ⚙️ Installation & Usage
 
-```
-/index.html          → Web UI  
-/final_targets.txt   → IP + domain list  
-/scanner.sh          → Scan script  
-```
-
----
-
-## 🚀 Quick Start
+## 🔧 Step 1: Clone project
 
 ```bash
-git clone https://github.com/aryaderangi/Gravityzone-
-cd Gravityzone-
+git clone https://github.com/aryaderangi/GravityScanTools.git
+cd GravityScanTools
+```
+
+## 🔧 Step 2: Make script executable
+
+```bash
 chmod +x scanner.sh
+```
+
+## 🔧 Step 3: Run scanner
+
+```bash
 ./scanner.sh
 ```
 
 ---
 
-## 🌐 Live Demo
+# 📂 Input File
 
-https://aryaderangi.github.io/Gravityzone-/
+Edit:
+
+```bash
+final_targets.txt
+```
+
+Example:
+
+```txt
+104.19.229.21
+google.com
+cloudflare.com
+```
 
 ---
 
-## 👤 Author
+# 📤 Output
 
-**Arjelicc**
-Digital builder • Music producer • Web3 developer
-Founder of Gravityzone
+Example result:
+
+```txt
+[OK] google.com -> 104.x.x.x
+[FAIL] 1.1.1.1
+```
 
 ---
 
-## 📌 Note
+# 🌐 Web UI
 
-This project is for research and testing purposes.
+https://aryaderangi.github.io/GravityScanTools/
+
+---
+
+# 🤖 Telegram
+
+* Topic: @gravityyzone
+* Channel: @jeliccray
+* Developer: Aria Derangi (@Arjellicc)
+
+---
+
+# ⚠️ Notes
+
+* Best results on VPS outside Iran
+* For research and testing purposes
+
+---
+
+# 💡 Tip
+
+Use clean IPs for:
+
+* Xray / Reality
+* CDN tunneling
+* Network testing
