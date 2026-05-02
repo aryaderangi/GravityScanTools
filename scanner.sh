@@ -1,5 +1,5 @@
 #!/bin/bash
-INPUT="final_targets.txt"
+INPUT="targets.txt"
 PORTS=(443 2053 2083 2087 2096 8443)
 
 grep -v '^#' $INPUT | while read line; do
